@@ -22,6 +22,13 @@ public class HealthProfile {
         setHeight(height);
     }
 
+    public HealthProfile(String name, int age, double weight, int feet, double inches) {
+        this.setName(name);
+        setAge(age);
+        setWeight(weight);
+        setHeight(feet, inches);
+    }
+
     //behaviors
     public double calculateBMI() {
         double bmi = (weight * 703) / (Math.pow(height, 2));
