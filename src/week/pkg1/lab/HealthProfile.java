@@ -1,13 +1,21 @@
 package week.pkg1.lab;
 
 public class HealthProfile {
-        private char name;
+        //attributes
+        private String name;
         private int age;
-        private int weight;
-        private int height;
+        private double weight;
+        private double height;
 
-        //setters
-        private void setName(char name) {
+        //constructors
+
+
+
+        //behaviors
+
+
+        //getters and setters
+        private void setName(String name) {
             this.name = name;
         }
 
@@ -15,11 +23,11 @@ public class HealthProfile {
             this.age = age;
         }
 
-        private void setWeight(int weight) {
+        private void setWeight(double weight) {
             this.weight = weight;
         }
 
-        private void setHeight(int feet, int inches) {
+        private void setHeight(double feet, double inches) {
             this.height = ((feet / 12) + inches);
         }
 
