@@ -1,3 +1,10 @@
+
+/***********************************************************************************************************************
+ Program Name: HealthProfileGUI.java
+ Programmer's Name: Jeremy Duncan
+ Program Description:   This creates the GUI interface and event listeners for user actions
+ **********************************************************************************************************************/
+
 package com.jeremy.lab2.lab;
 
 import javax.swing.*;

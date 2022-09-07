@@ -1,3 +1,11 @@
+/***********************************************************************************************************************
+ Program Name: HealthProfile.java
+ Programmer's Name: Jeremy Duncan
+ Program Description:   This program will take inputs from a user
+                        and calculate their BMI, Weight Category, and Max Heart Rate
+ **********************************************************************************************************************/
+
+
 package com.jeremy.lab2.lab;
 
 public class HealthProfile {
