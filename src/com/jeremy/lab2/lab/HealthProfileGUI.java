@@ -1,6 +1,8 @@
 package com.jeremy.lab2.lab;
 
 import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class HealthProfileGUI {
     private JPanel form;
@@ -23,6 +25,22 @@ public class HealthProfileGUI {
     private JLabel lblHeightFeet;
     private JLabel lblHeightInches;
 
+
+    public HealthProfileGUI() {
+        btnDisplay.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+
+            }
+        });
+        btnClear.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+            }
+        });
+    }
 
     public static void main(String[] args) {
         JFrame frame = new JFrame("Health Profile App");
