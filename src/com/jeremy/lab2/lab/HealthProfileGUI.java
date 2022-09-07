@@ -3,6 +3,7 @@ package com.jeremy.lab2.lab;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.ContainerAdapter;
 
 public class HealthProfileGUI {
     private JPanel form;
@@ -27,20 +28,23 @@ public class HealthProfileGUI {
 
 
     public HealthProfileGUI() {
-        btnDisplay.addActionListener(new ActionListener() {
-            @Override
+        ActionListener ButtonPress = new ActionListener() {
             public void actionPerformed(ActionEvent e) {
 
+                if (e.getSource() == btnClear) {
+                    JOptionPane.showMessageDialog(null, "Cleared");
+                }
+                else if (e.getSource() == btnDisplay) {
+                    JOptionPane.showMessageDialog(null, "Display");
+                }
 
             }
-        });
-        btnClear.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-
-            }
-        });
+        };
+        btnClear.addActionListener(ButtonPress);
+        btnDisplay.addActionListener(ButtonPress);
     }
+
+
 
     public static void main(String[] args) {
         JFrame frame = new JFrame("Health Profile App");
@@ -48,6 +52,9 @@ public class HealthProfileGUI {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.pack();
         frame.setVisible(true);
+
+
     }
 }
+
 
