@@ -4,6 +4,7 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.ContainerAdapter;
+import java.text.DecimalFormat;
 
 public class HealthProfileGUI {
     private JPanel form;
@@ -32,10 +33,58 @@ public class HealthProfileGUI {
             public void actionPerformed(ActionEvent e) {
 
                 if (e.getSource() == btnClear) {
+
+                    txtName.setText("");
+                    txtAge.setText("");
+                    txtWeight.setText("");
+                    txtHeightFeet.setText("");
+                    txtHeightInches.setText("");
+                    txtBMI.setText("");
                     JOptionPane.showMessageDialog(null, "Cleared");
+
+
                 }
                 else if (e.getSource() == btnDisplay) {
-                    JOptionPane.showMessageDialog(null, "Display");
+                    if(txtName.getText().equals("")) {
+                        JOptionPane.showMessageDialog(null, "Name is required", "Error", JOptionPane.ERROR_MESSAGE);
+                        txtName.requestFocus();
+                        return;
+                    }
+                    if(txtAge.getText().equals("")) {
+                        JOptionPane.showMessageDialog(null, "Age is required", "Error", JOptionPane.ERROR_MESSAGE);
+                        txtAge.requestFocus();
+                        return;
+                    }
+                    if(txtWeight.getText().equals("")) {
+                        JOptionPane.showMessageDialog(null, "Weight is required", "Error", JOptionPane.ERROR_MESSAGE);
+                        txtWeight.requestFocus();
+                        return;
+                    }
+                    if(txtHeightFeet.getText().equals("")) {
+                        JOptionPane.showMessageDialog(null, "Height in feet is required", "Error", JOptionPane.ERROR_MESSAGE);
+                        txtHeightFeet.requestFocus();
+                        return;
+                    }
+                    if(txtHeightInches.getText().equals("")) {
+                        JOptionPane.showMessageDialog(null, "Height in inches is required", "Error", JOptionPane.ERROR_MESSAGE);
+                        txtHeightInches.requestFocus();
+                        return;
+                    }
+
+                    String name = txtName.getText();
+                    int age = Integer.parseInt(txtAge.getText());
+                    double weight = Double.parseDouble(txtWeight.getText());
+                    int feet = Integer.parseInt(txtHeightFeet.getText());
+                    double inches = Double.parseDouble(txtHeightInches.getText());
+
+                    HealthProfile profile = new HealthProfile(name, age, weight, feet, inches);
+
+                    double bmi = profile.calculateBMI();
+                    DecimalFormat fmt = new DecimalFormat("0.0");
+                    txtBMI.setText(fmt.format(bmi));
+                    txtCategory.setText(profile.calculateCategory());
+                    txtMaxHeartRate.setText("" + profile.calculateMaxHR());
+
                 }
 
             }
