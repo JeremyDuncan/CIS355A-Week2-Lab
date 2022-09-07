@@ -48,7 +48,7 @@ public class HealthProfile {
 
     }
 
-    public double calculateMaxHR() {
+    public int calculateMaxHR() {
         return 220 - age;
     }
 
