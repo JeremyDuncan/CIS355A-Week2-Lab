@@ -1,4 +1,4 @@
-package week.pkg1.lab;
+package com.jeremy.lab2.lab;
 
 public class HealthProfile {
     //attributes
