@@ -34,7 +34,6 @@ public class HealthProfileGUI {
     private JLabel lblHeightFeet;
     private JLabel lblHeightInches;
 
-
     public HealthProfileGUI() {
         ActionListener ButtonPress = new ActionListener() {
             public void actionPerformed(ActionEvent e) {
@@ -65,27 +64,27 @@ public class HealthProfileGUI {
                 // then calculate BMI, Category, and Max Heart Rate
                 else if (e.getSource() == btnDisplay) {
                     // Shows alert if name, age, weight, or height text fields are empty
-                    if(txtName.getText().equals("")) {
+                    if (txtName.getText().equals("")) {
                         JOptionPane.showMessageDialog(null, "Name is required", "Error", JOptionPane.ERROR_MESSAGE);
                         txtName.requestFocus();
                         return;
                     }
-                    if(txtAge.getText().equals("")) {
+                    if (txtAge.getText().equals("")) {
                         JOptionPane.showMessageDialog(null, "Age is required", "Error", JOptionPane.ERROR_MESSAGE);
                         txtAge.requestFocus();
                         return;
                     }
-                    if(txtWeight.getText().equals("")) {
+                    if (txtWeight.getText().equals("")) {
                         JOptionPane.showMessageDialog(null, "Weight is required", "Error", JOptionPane.ERROR_MESSAGE);
                         txtWeight.requestFocus();
                         return;
                     }
-                    if(txtHeightFeet.getText().equals("")) {
+                    if (txtHeightFeet.getText().equals("")) {
                         JOptionPane.showMessageDialog(null, "Height in feet is required", "Error", JOptionPane.ERROR_MESSAGE);
                         txtHeightFeet.requestFocus();
                         return;
                     }
-                    if(txtHeightInches.getText().equals("")) {
+                    if (txtHeightInches.getText().equals("")) {
                         JOptionPane.showMessageDialog(null, "Height in inches is required", "Error", JOptionPane.ERROR_MESSAGE);
                         txtHeightInches.requestFocus();
                         return;
@@ -118,7 +117,6 @@ public class HealthProfileGUI {
         btnClear.addActionListener(ButtonPress);
         btnDisplay.addActionListener(ButtonPress);
     }
-
 
 
     public static void main(String[] args) {
