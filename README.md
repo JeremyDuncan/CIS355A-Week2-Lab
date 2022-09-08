@@ -1,5 +1,8 @@
 ## CIS355A Week 2 Lab—Developing an OOP GUI Application
 
+<!-- screenshot of app -->
+<img src="./app-screenshot.webp" />
+
 ### Objectives
 * Create a GUI that uses JTextField, JLabel, and JButton.
 * Write event handlers to process user data.
@@ -40,5 +43,3 @@ Code event handlers for each button.
 * Display the results on the GUI.
 
 * Clear	Clear all text boxes on the GUI.
-
-// Test Sat
